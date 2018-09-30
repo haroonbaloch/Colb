@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Color Blind Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="{% static "css/styles2.min.css"%}"/>
+</head>
+<body>
+    <div>
+      <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-color:#dddddd;height:59px;">
+          <div class="container"><a class="navbar-brand" href="{% url 'index' %}" style="color:#9c3d3d;font-size:29px;">ColorBlind Test</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+              <div
+                  class="collapse navbar-collapse" id="navcol-1">
+                  <ul class="nav navbar-nav mr-auto"></ul><span class="navbar-text actions"> <a href="{% url 'login' %}" target="_top" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="{% url 'reg' %}">Sign Up</a></span></div>
+</div>
+    </nav>
+    </div>
+    <div>
+        <div class="header-blue" style="height:532px;">
+            <div class="container hero" style="margin-top:0px;">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                        <h1 class="text-center" style="margin-top:117px;"><strong> 1 in 12 men suffer from color blindness</strong> </h1>
+                        <p class="text-justify"> People are colorblind in world by birth. Color blindness also knownas a color vision problem. It is the lack of ability to see red, green, blue,or any combination of these colors. Most people who are colorblind inheritedthis disorder
+                            from their parents, and is existed at birth. To diagnosecolorblindness, many tests are performed. The popular test is by using IshiharaPlates. </p><a class="btn btn-light btn-lg action-button" role="button" href="{% url 'ColorBlind_App:colors' %}"
+                            style="margin-left:155px;">Take Test</a></div>
+                    <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                        <div class="iphone-mockup"><img class="rounded img-fluid" src="{% static "/img/maxresdefault.jpg"%}" style="width:305px;margin-left:0px;padding:0px;margin-top:51px;"></div><img class="rounded img-fluid" src="{% static "/img/112-1259_IMG%20copy.jpg"%}" style="width:307px;margin-left:0px;margin-top:18px;margin-right:16px;">
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services </h3>
+                        <ul>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li><a href="{% url 'reg' %}">Sing up</a></li>
+                            <li><a href="{% url 'login' %}">Log in</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 offset-lg-4 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">ColorBlind Test© 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

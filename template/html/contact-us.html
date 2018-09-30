@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Contact Us - Brand</title>
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css"%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static "css/styles3.min.css"%}">
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-color:#dddddd;height:59px;">
+      <div class="container"><a class="navbar-brand" href="{% url 'index' %}" style="color:#9c3d3d;font-size:29px;">ColorBlind Test</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+          <div
+              class="collapse navbar-collapse" id="navcol-1">
+              <ul class="nav navbar-nav mr-auto"></ul><span class="navbar-text actions"> <a href="{% url 'login' %}" target="_top" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="{% url 'reg' %}">Sign Up</a></span></div>
+
+            </div>
+        </div>
+    </nav>
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Contact Us</h2>
+                    <p>For information and qurries please contact us</p>
+                </div>
+                <form>
+                    <div class="form-group"><label>Name</label><input class="form-control" type="text"></div>
+                    <div class="form-group"><label>Subject</label><input class="form-control" type="text"></div>
+                    <div class="form-group"><label>Email</label><input class="form-control" type="text"></div>
+                    <div class="form-group"><label>Message</label><textarea class="form-control"></textarea></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="button">Send</button></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+          <div class="col-sm-4 col-md-3 item">
+              <h3>Services </h3>
+              <ul>
+                  <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                  <li><a href="{% url 'reg' %}">Sing up</a></li>
+                  <li><a href="{% url 'login' %}">Log in</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{% static "/js/script1.min.js"%}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <link rel="stylesheet" href="{% static "css/bootstrap.min.css"%}"/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Brand</title>
+    <link rel="stylesheet" href="{% static "css/styles.min.css"%}"/>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css"%}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static "css/styles.min.css"%}"/>
+</head>
+
+<body>
+
+
+    <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+  .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+  .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+  .tg .tg-q4pq{background-color:#D2E4FC;font-size:16px;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-gmla{font-size:16px;border-color:inherit;text-align:center;vertical-align:top}
+  </style>
+  <div>
+      <h6><nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-color:#dddddd;height:59px;">
+          <div class="container"><a class="navbar-brand" href="{% url 'index' %}" style="color:#9c3d3d;font-size:29px;">ColorBlind Test</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+              <div
+                  class="collapse navbar-collapse" id="navcol-1">
+                  <ul class="nav navbar-nav mr-auto"></ul><span class="navbar-text actions"> <a href="signup.html" target="_top" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="">Sign Up</a></span></div>
+</h1>
+<h1 class="text-center">Color Blind Test Results</h1>
+  </div>
+    <main class="page login-page">
+        <section class="clean-block clean-form dark">
+          {%if access_record%}
+          <table class="tg">
+            {% for acc in access_record %}
+          <tr>
+            <th class="tg-gmla">Plate #</th>
+            <th class="tg-gmla">Ishihara Plate</th>
+            <th class="tg-gmla">Value Entered</th>
+            <th class="tg-gmla">Actual Value</th>
+            <th class="tg-gmla">Description</th>
+          </tr>
+          <tr>
+            <td class="tg-gmla">1<br></td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-01-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field1}}</td>
+            <td class="tg-q4pq">12</td>
+            <td class="tg-gmla">Normal, Red-Green Deficiency and Total ColorBlindess should see 12</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">2</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-02-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field2}}</td>
+            <td class="tg-q4pq">8</td>
+            <td class="tg-gmla">Normal Person should see 8, Person with Red-Green Deficiency should see 3 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">3</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-03-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field3}}</td>
+            <td class="tg-q4pq">6</td>
+            <td class="tg-gmla">Normal Person should see 6, Person with Red-Green Deficiency should see 5 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">4</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-04-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field4}}</td>
+            <td class="tg-q4pq">29</td>
+            <td class="tg-gmla">Normal Person should see 29, Person with Red-Green Deficiency should see 70 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">5</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-05-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field5}}</td>
+            <td class="tg-q4pq">57</td>
+            <td class="tg-gmla">Normal Person should see 57, Person with Red-Green Deficiency should see 35 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">6</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-06-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field6}}</td>
+            <td class="tg-q4pq">5</td>
+            <td class="tg-gmla">Normal Person should see 5, Person with Red-Green Deficiency should see 2 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">7</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-07-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field7}}</td>
+            <td class="tg-q4pq">3</td>
+            <td class="tg-gmla">Normal Person should see 3, Person with Red-Green Deficiency should see 5 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">8</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-08-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field8}}</td>
+            <td class="tg-q4pq">15</td>
+            <td class="tg-gmla">Normal Person should see 15, Person with Red-Green Deficiency should see 17 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">9</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-09-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field9}}</td>
+            <td class="tg-q4pq">74</td>
+            <td class="tg-gmla">Normal Person should see 74, Person with Red-Green Deficiency should see 21 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">10</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-10-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field10}}</td>
+            <td class="tg-q4pq">2</td>
+            <td class="tg-gmla">Normal Person should see 2, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">11</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-11-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field11}}</td>
+            <td class="tg-q4pq">6</td>
+            <td class="tg-gmla">Normal Person should see 6, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">12</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-12-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field12}}</td>
+            <td class="tg-q4pq">97</td>
+            <td class="tg-gmla">Normal Person should see 97, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">13</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-13-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field13}}</td>
+            <td class="tg-q4pq">45</td>
+            <td class="tg-gmla">Normal Person should see 45, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">14</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-14-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field14}}</td>
+            <td class="tg-q4pq">5</td>
+            <td class="tg-gmla">Normal Person should see 5, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">15</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-15-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field15}}</td>
+            <td class="tg-q4pq">7</td>
+            <td class="tg-gmla">Normal Person should see 7, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">16</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-16-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field16}}</td>
+            <td class="tg-q4pq">16</td>
+            <td class="tg-gmla">Normal Person should see 16, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">17</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-17-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field17}}</td>
+            <td class="tg-q4pq">73</td>
+            <td class="tg-gmla">Normal Person should see 73, Person with Red-Green Deficiency And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">18</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-18-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field18}}</td>
+            <td class="tg-q4pq">X</td>
+            <td class="tg-gmla">Normal Person should see Nothing, Person with Red-Green Deficiency should see 5 And Person with Total ColorBlindness should see Nothing<br></td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">19</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-19-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field19}}</td>
+            <td class="tg-q4pq">X</td>
+            <td class="tg-gmla">Normal Person should see Nothing, Person with Red-Green Deficiency should see 2 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">20</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-20-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field20}}</td>
+            <td class="tg-q4pq">X</td>
+            <td class="tg-gmla">Normal Person should see Nothing, Person with Red-Green Deficiency should see 45 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          <tr>
+            <td class="tg-gmla">21</td>
+            <td class="tg-q4pq"><img src="{% static "img/Ishihara-Plate-21-38.jpg"%}"/></td>
+            <td class="tg-gmla">{{acc.field21}}</td>
+            <td class="tg-q4pq">X</td>
+            <td class="tg-gmla">Normal Person should see Nothing, Person with Red-Green Deficiency should see 73 And Person with Total ColorBlindness should see Nothing</td>
+          </tr>
+          {%endfor%}
+        </table>
+
+          {%else%}
+          <p>not working</p>
+          {% endif%}
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{% static "js/script.min.js"%}"></script>
+</body>
+
+</html>
